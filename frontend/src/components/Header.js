@@ -21,7 +21,7 @@ const Header = (props) => {
   <DropdownMenu>
     <DropdownItem>Log in</DropdownItem>
     <DropdownItem divider />
-    <DropdownItem>Log out</DropdownItem>
+    <DropdownItem>Register</DropdownItem>
   </DropdownMenu>
   </Dropdown>
         <img src={fotos} alt="logo" id="titulo" />
