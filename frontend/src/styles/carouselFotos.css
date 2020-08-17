@@ -1,0 +1,48 @@
+#Carouselimg{
+   display: flex;
+   flex-wrap: wrap;
+   width: 98vw;
+   padding-left: 5vw;
+   margin-bottom: 5vh;
+   margin-top:4vh ;
+}
+
+.imagenesCrousel{
+   background-position: center;
+   background-size: 50.5vw;
+   background-repeat: no-repeat;
+   width: 40vw;
+   height: 25vw;
+   overflow: hidden;
+   margin: 2vw;
+   box-shadow: 0vw 0vw 2vw 0vw #9494949a;
+}
+
+.carousel-indicators li{
+   background-color: rgb(168, 168, 168)!important;
+
+}
+
+.carousel-control-prev-icon {
+   background-image: url(../imagenes/arrowC2.png)!important;
+   margin-left:-7vw;
+   margin-top: -1vw;
+   background-size: 1.5vw!important;
+}
+
+
+.carousel-control-next-icon {
+   background-image: url(../imagenes/arrowC.png)!important;
+   margin-top: -1vw;
+   margin-right:-2vw;
+   background-size: 1.5vw!important;
+}
+
+.imagenesCrousel h3{
+   color: #ffffffc0;
+   text-align: center;
+   margin-top: 10vw;
+   background-color: #9b999998;
+   padding: 1vw;
+}
+
