@@ -11,8 +11,6 @@ class Home extends React.Component{
        
         return (
         <>
-        <Header />
-
         <div id="fondos" >
         <img src={foto} />
         <h2>Come to know us</h2> 
@@ -27,7 +25,6 @@ class Home extends React.Component{
         </div>
         <p id="textos">Every place has its own magic! <br/> if you love to travel you came to the right page</p>
         <Seccion />
-        <Footer />
         </>
         )
     }

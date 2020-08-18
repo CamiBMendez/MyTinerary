@@ -5,51 +5,29 @@
     background-color: #ededed;
     box-shadow: 0VW 0VW 2VW 0VW #8f8b8b96;
 }
-@media only screen and (max-width: 410px){
-    .nav{
-        position: absolute;
-        display: inline-block;
-        width: 25vw;
-        margin-left: 75vw;
-        margin-top: -18vw;
-        background-color:#ededed;
-        border-radius: 0.5vw;  
-    }
-    #todo img{
-        width: 8vw;
-    
-    }
-    img#titulo{
-        width: 39vw;
-        margin:-2.5vw;
-       margin-right: 23vw;
-    }
-    nav{
-        display: none;
-       }
-    
-}
 
 @media only screen and (max-width: 600px) and (min-width: 410px){
-.nav{
-    position: absolute;
-    width: 25vw;
-    margin-left: 75vw;
-    margin-top: -14vw;
+ #todo img{
+       width: 8vw;
+      
+}
+#hamburguesa{
     background-color:#ededed;
-    border-radius: 0.5vw; 
-   
+    border: none;
+    margin-right: 5vw;
 }
-#todo img{
-    width: 8vw;
-  
+#hamburguesa img{
+    width: 6vw;
+
 }
+
 img#titulo{
     width: 39vw;
-    margin:-2.5vw;
-   margin-right: 23vw;
+    margin:-4vw;
+    margin-left: 2vw;
+
 }
-nav{
+#menu{
     display: none;
    }
 }
@@ -59,22 +37,25 @@ nav{
         display: none;
     }
     
-    nav{
-       padding-right: 3vw;
-        display: inline;
+    #menu{
+        display: flex;
+        flex-direction: row;
+        padding-right: 3vw;
+      
         
     }
-    nav a{
+    .navs{
         color: #818080;
         text-decoration: none;
         padding: 1vw;
     }
-    nav a#active{
+    #active{
         color: #000000;
     }
-    nav a:hover{
+    .navs:hover{
         color: #000000;
         text-decoration: none;
+
        
     }
     #todo img{

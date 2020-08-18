@@ -60,7 +60,9 @@ p#textos{
         color: #7c9fd4;
         display: block;
         font-size: 3vw;
-       
+    }
+    #fondos img{
+        display: none;
     }
 }
 
