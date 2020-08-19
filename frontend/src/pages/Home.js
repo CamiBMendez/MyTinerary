@@ -1,27 +1,17 @@
 import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 import Seccion from '../components/Seccion'
-import foto from '../imagenes/fondouno.jpg'
 import arrow from '../imagenes/arrow.png'
-
+import {NavLink} from "react-router-dom"
 
 class Home extends React.Component{
     render(){
-       
         return (
         <>
-        <div id="fondos" >
-        <img src={foto} />
-        <h2>Come to know us</h2> 
-        <p>Find your perfect trip, designed by </p>
-        <p>insiders who know and love their cities</p>
-        </div>
         <div id="masTodo">
         <h3 id="mas">view all the cities</h3>
         <p id="texto">Learn about the best places in the world</p>
         <hr/>
-        <button id="boton"><img src={arrow}  id="arrow"/></button>
+        <button id="boton"><NavLink to="/ciudades" className="navs"><img src={arrow} alt="flecha" id="arrow"/></NavLink></button>
         </div>
         <p id="textos">Every place has its own magic! <br/> <span>if you love to travel you came to the right page</span></p>
         <Seccion />

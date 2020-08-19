@@ -8,37 +8,12 @@
 body{
     height: 100%;
 }
-#fondos{
-    display: flex;
-}
 #fondos img{
-   
-    width: 100vw;
+
+    width: 100%;
     box-shadow: 0vw 0vw 2vw 0vw #acaaaacc;
 }
 
-#fondos h2{
-    position: absolute;
-    padding-left: 30vw;
-    padding-top: 3%;
-    font-weight: bold;
-    font-size: 3vw;
-    color: #ffffff;
-}
-#fondos p{
-    position: absolute;
-    padding-left: 29vw;
-    padding-top: 8%;
-    font-size: 1.5vw;
-    color: #ffffff;
-    font-weight: lighter;
-}
-#fondos p:last-child{
-  
-    padding-left: 25vw;
-    padding-top: 10%;
-    color: #ffffff;
-}
 
 h3#mas{
     text-align: center;
@@ -48,50 +23,54 @@ h3#mas{
    
 }
 #masTodo{
-    height: 30vh;
+    height: 42%;
 
 }
 p#textos{
     display: none;
 }
 
-@media only screen and (max-width: 600px){
+#arrow {
+  width: 14vw;
+  padding: 2vw;
+  margin-left: -1.7vw;
+}
+#boton{
+    margin-left: 45vw;
+    background: none;
+    border: none;
+}
+@media only screen and (max-width: 800px){
+    #arrow {
+        width: 16vw;
+        padding: 2vw; 
+      }
+      #boton{
+        margin-left: 34vw;
+        background: none;
+        border: none;
+    }
+    #fondos{
+        display: none;
+    }
     p#textos{
         text-align: center;
         color: #536786;
         display: block;
-        font-size: 3vw;
+        font-size: 2.5vw;
         font-weight: bold;
         background-color: #a7b4c92a;
-        margin: 8vh 9vw 0vh 7vw
+        margin: 15% 9% 0% 7%
     }
     span{
         font-weight: normal; 
         font-style: italic;
         color: #a7bddf;
     }
-    #fondos{
-        display: none;
-    }
     #masTodo{
-        height: 20vh;
+        height: 23vh;
     
     }
-}
-
-#arrow {
-  width: 14vw;
-  padding: 2vw;
-  margin-top:-2vh;
-  margin-left: -1.7vw;
-}
-@media only screen and (max-width: 800px){
-    #arrow {
-        width: 16vw;
-        padding: 2vw; 
-        margin-left: -3vw;
-
-      }
 }
 
 #arrow:hover{
@@ -99,36 +78,11 @@ p#textos{
     padding: 1.2vw;
 }
 
-#boton{
-    margin-left: 45vw;
-    background: none;
-    border: none;
-}
-        
-.carousel-indicators li{
-    background-color: rgb(168, 168, 168)!important;
-
-}
-
-.carousel-control-prev-icon {
-    background-image: url(../imagenes/arrowC2.png)!important;
-    margin-left:-7vw;
-    margin-top: -4vw;
-    background-size: 1.5vw!important;
-}
-
-
-.carousel-control-next-icon {
-    background-image: url(../imagenes/arrowC.png)!important;
-    margin-top: -4vw;
-    margin-right:-2vw;
-    background-size: 1.5vw!important;
-}
 
 p#texto{
     text-align: center;
     color: #7c9fd4;
 }
 hr{
- margin: 30vw;
+ margin: 0vh 30vw;
 }

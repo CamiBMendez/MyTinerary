@@ -15,20 +15,34 @@
     text-decoration: none;
     padding: 1vw;
 }
+.navsa:hover{
+    color: #000000;
+    text-decoration: none; 
+}
+.navsa{
+    color: #818080;
+    text-decoration: none;
+}
+.active{
+    color: #000000;
+}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
  #todo img{
        width: 8vw;
+       margin-top: 2vh;
       
 }
 #hamburguesa{
     background-color:#ededed;
     border: none;
     margin-right: 6vw;
+    margin-top: 1vh;
 }
 #hamburguesa img{
     width: 6vw;
-
+   
+    
 }
 #hola{
     text-decoration: none;
@@ -42,34 +56,42 @@ img#titulo{
 #menu{
     display: none;
    }
+#drop{
+       margin-right: 95px;
+       margin-top: 9px;
+   }
+.navs{
+    margin-left: 10vw!important;
 }
 
-@media only screen and (min-width: 601px){
-    .nav{
-        display: none;
-    }
+}
+
+@media only screen and (min-width: 801px){
+.nav{
+    display: none;
+}
     
-    #menu{
-        display: flex;
-        flex-direction: row;
-        padding-right: 3vw;
+#menu{
+    display: flex;
+    flex-direction: row;
+    padding-right: 3vw;
+}
+#todo img{
+    width: 5vw;
       
-        
-    }
-    .active{
-        color: #000000;
-    }
-    #todo img{
-        width: 5vw;
-      
-    }
-    img#titulo{
-        width: 19vw;
-        margin:1vw;
+}
+img#titulo{
+    width: 19vw;
+    margin:1vw;
        
     
-    }
-    }
+}
+#todo{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+}
 
 #back{
     background-color:#ededed;

@@ -14,12 +14,12 @@ const Menu = (props) => {
       <DropdownToggle id="hamburguesa">
           <img src={foto} alt="menu" />
       </DropdownToggle>
-      <DropdownMenu >
-        <DropdownItem>
+      <DropdownMenu id="drop">
+        <DropdownItem className="items">
           <NavLink to="/home"  className="navs">Home</NavLink>
         </DropdownItem>
         <DropdownItem divider />
-        <DropdownItem>
+        <DropdownItem className="items">
           <NavLink to="/ciudades" className="navs">Cities</NavLink>
         </DropdownItem>
       </DropdownMenu>
