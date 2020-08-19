@@ -29,7 +29,6 @@ const Header = (props) => {
         <div id="menu">
           <NavLink to="/home" id="active" className="navs">Home</NavLink>
           <NavLink to="/ciudades" className="navs">Cities</NavLink>
-          <NavLink to="" className="navs">Settings</NavLink>
         </div>
         </div>
         <div  className="nav">

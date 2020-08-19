@@ -7,28 +7,29 @@ import Carouselfotos from "../components/Carouselfotos"
 
 class Seccion extends React.Component {
   state = {
-    slide1: ['Londres', 'Paris','Roma','Madrid'],
-    slide2: ['Miami', 'New-York','San-Diego','Los-Angeles'],
-    slide3: ['Sydney', 'Cairns','Melbourne','Gold-Coast']
+    slide:[
+      ['Londres', 'Paris','Roma','Madrid'],
+      ['Miami', 'New-York','San-Diego','Los-Angeles'],
+      ['Sydney', 'Cairns','Melbourne','Gold-Coast']
+    ]
   }
 
   render() {
 
     return (
-
-   <Carousel>
-     <Carousel.Item >
-        <Carouselfotos fotos={this.state.slide1}/>
-    </Carousel.Item>
-      <Carousel.Item >
-      <Carouselfotos  fotos={this.state.slide2}/>
-      </Carousel.Item>
-      <Carousel.Item>
-      <Carouselfotos   fotos={this.state.slide3}/>
-      </Carousel.Item>
-    </Carousel>
-    )
-  }
+    <Carousel>
+    {this.state.slide.map(conjunto => {
+     return(
+    <Carousel.Item >
+       <Carouselfotos fotos={conjunto}/>
+   </Carousel.Item>
+   )
+  })}
+  </Carousel>
+  )
 }
+}
+  
+
 
 export default Seccion

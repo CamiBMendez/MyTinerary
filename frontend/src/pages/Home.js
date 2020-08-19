@@ -23,7 +23,7 @@ class Home extends React.Component{
         <hr/>
         <button id="boton"><img src={arrow}  id="arrow"/></button>
         </div>
-        <p id="textos">Every place has its own magic! <br/> if you love to travel you came to the right page</p>
+        <p id="textos">Every place has its own magic! <br/> <span>if you love to travel you came to the right page</span></p>
         <Seccion />
         </>
         )

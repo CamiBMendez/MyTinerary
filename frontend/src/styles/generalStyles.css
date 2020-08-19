@@ -49,6 +49,7 @@ h3#mas{
 }
 #masTodo{
     height: 30vh;
+
 }
 p#textos{
     display: none;
@@ -57,23 +58,39 @@ p#textos{
 @media only screen and (max-width: 600px){
     p#textos{
         text-align: center;
-        color: #7c9fd4;
+        color: #536786;
         display: block;
         font-size: 3vw;
+        font-weight: bold;
+        background-color: #a7b4c92a;
+        margin: 8vh 9vw 0vh 7vw
     }
-    #fondos img{
+    span{
+        font-weight: normal; 
+        font-style: italic;
+        color: #a7bddf;
+    }
+    #fondos{
         display: none;
+    }
+    #masTodo{
+        height: 20vh;
+    
     }
 }
 
 #arrow {
   width: 14vw;
-  padding: 2vw; 
+  padding: 2vw;
+  margin-top:-2vh;
+  margin-left: -1.7vw;
 }
 @media only screen and (max-width: 800px){
     #arrow {
-        width: 17vw;
+        width: 16vw;
         padding: 2vw; 
+        margin-left: -3vw;
+
       }
 }
 

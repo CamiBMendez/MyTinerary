@@ -4,9 +4,19 @@
     justify-content: space-between;
     background-color: #ededed;
     box-shadow: 0VW 0VW 2VW 0VW #8f8b8b96;
+    
+}
+.navs:hover{
+    color: #000000;
+    text-decoration: none; 
+}
+.navs{
+    color: #818080;
+    text-decoration: none;
+    padding: 1vw;
 }
 
-@media only screen and (max-width: 600px) and (min-width: 410px){
+@media only screen and (max-width: 600px) {
  #todo img{
        width: 8vw;
       
@@ -14,18 +24,20 @@
 #hamburguesa{
     background-color:#ededed;
     border: none;
-    margin-right: 5vw;
+    margin-right: 6vw;
 }
 #hamburguesa img{
     width: 6vw;
 
 }
+#hola{
+    text-decoration: none;
+}
 
 img#titulo{
     width: 39vw;
-    margin:-4vw;
-    margin-left: 2vw;
-
+    margin:1vw;
+    margin-left: 5vw;
 }
 #menu{
     display: none;
@@ -44,27 +56,16 @@ img#titulo{
       
         
     }
-    .navs{
-        color: #818080;
-        text-decoration: none;
-        padding: 1vw;
-    }
-    #active{
+    .active{
         color: #000000;
-    }
-    .navs:hover{
-        color: #000000;
-        text-decoration: none;
-
-       
     }
     #todo img{
         width: 5vw;
       
     }
     img#titulo{
-        width: 20vw;
-        margin:-2vw;
+        width: 19vw;
+        margin:1vw;
        
     
     }
@@ -75,6 +76,7 @@ img#titulo{
     border: none;
     margin-left: 5vw;
 }
+
 
 
 

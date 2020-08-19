@@ -14,9 +14,9 @@ const Menu = (props) => {
       <DropdownToggle id="hamburguesa">
           <img src={foto} alt="menu" />
       </DropdownToggle>
-      <DropdownMenu>
+      <DropdownMenu >
         <DropdownItem>
-          <NavLink to="/home" id="active" className="navs">Home</NavLink>
+          <NavLink to="/home"  className="navs">Home</NavLink>
         </DropdownItem>
         <DropdownItem divider />
         <DropdownItem>
