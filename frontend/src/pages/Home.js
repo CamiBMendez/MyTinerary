@@ -11,7 +11,9 @@ class Home extends React.Component{
         <h3 id="mas">view all the cities</h3>
         <p id="texto">Learn about the best places in the world</p>
         <hr/>
+        <div id="centrarBoton">
         <button id="boton"><NavLink to="/ciudades" className="navs"><img src={arrow} alt="flecha" id="arrow"/></NavLink></button>
+        </div>
         </div>
         <p id="textos">Every place has its own magic! <br/> <span>if you love to travel you came to the right page</span></p>
         <Seccion />
