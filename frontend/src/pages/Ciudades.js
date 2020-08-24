@@ -39,7 +39,7 @@ class Ciudades extends React.Component{
             <>
             <div id="diiv"></div>
             <div id="buscador">
-            <input type="text" placeholder="Busca la ciudad" name="ciudad" id="ciudad"
+            <input type="text" placeholder="Search the perfect city" name="ciudad" id="ciudad"
             onChange={this.valores} />
             </div>
             <ul id="fotosCiudad">
