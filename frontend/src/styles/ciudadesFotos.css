@@ -1,0 +1,92 @@
+#fotosCiudad{
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 100vw;
+   margin-top:10vh ;
+}
+#imagenesCiudad{
+    width: 40vw;
+    height: 20vw;
+    box-shadow: 0vw 0vw 2vw 0vw #9494949a;
+}
+#imagenesCiudad:hover{
+    width: 40.1vw;
+    height: 20.1vw;
+    box-shadow: 0vw 0vw 2vw 0vw #707070e5;
+}
+
+#textos {
+    position: relative;
+    margin-bottom: -36%;
+    background-color: #5f5f5fa6;
+}
+#textos p{
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+span{
+    font-weight: normal;
+}
+#listaa{
+    margin: 2vw;
+    margin-bottom: 10%;
+    list-style: none;
+    
+}
+#buscador{
+    display: flex;
+    justify-content: center;
+}
+#ciudad{
+    margin:6%  0%;
+    text-align: center;
+    padding: 1vh 10vw;
+    font-weight: bolder;
+    border:none;
+    border-bottom: 2px solid #3a3a3a;
+}
+#padreImagen{
+    width:30vw; 
+    margin-bottom:40vh ;
+}
+#imagenCity{
+    width:100%;
+    margin-top: -10vh;
+    
+}
+@media only screen and (max-width: 600px){
+    #fotosCiudad{
+       display: flex;
+       align-content: center;
+       justify-content: center;
+       width: 80vw;
+       padding-left: 15vw;
+       margin-bottom: 5vh;
+       margin-left: 1vw;
+       margin-top:4vh ;
+    }
+    #imagenesCiudad{
+        width: 70vw;
+        height: 35vw;
+        margin-bottom: 12vh;
+        box-shadow: 0vw 0vw 2vw 0vw #9494949a;
+    }
+    #imagenesCiudad:hover{
+        width: 70.2vw;
+        height: 35.2vw;
+        box-shadow: 0vw 0vw 2vw 0vw #707070e5;
+    }
+    #textos p{
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 2.5vw;
+    }
+    #ciudad{
+        margin:10% 0% 15% 0%;
+        text-align: center;
+    }
+}
