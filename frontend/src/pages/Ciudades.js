@@ -37,6 +37,7 @@ class Ciudades extends React.Component{
         }
         return(
             <>
+            <div id="diiv"></div>
             <div id="buscador">
             <input type="text" placeholder="Busca la ciudad" name="ciudad" id="ciudad"
             onChange={this.valores} />
@@ -44,7 +45,7 @@ class Ciudades extends React.Component{
             <ul id="fotosCiudad">
             {mensaje()}
             {this.state.ciudades.map(ciudad =>{
-                  return <CiudadesFoto ciudad={ciudad} /> 
+                  return <CiudadesFoto key={ciudad.city} ciudad={ciudad} /> 
               })}
             </ul>
             </>

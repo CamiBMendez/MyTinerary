@@ -10,7 +10,6 @@ import {NavLink} from "react-router-dom"
 const Header = (props) => {
     const [isOpen, setDropdownOpen] = useState(false);
     const toggle = () => setDropdownOpen(!isOpen);
-    const foto = require('../imagenes/fondouno.jpg')
     return (
       <>
       <div id="todo">
@@ -34,9 +33,6 @@ const Header = (props) => {
         <div  className="nav">
         <Menu />
         </div>
-        </div>
-        <div id="fondos" >
-        <img src={foto} alt="fondo"/>
         </div>
 
       </>

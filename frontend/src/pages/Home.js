@@ -5,8 +5,12 @@ import {NavLink} from "react-router-dom"
 
 class Home extends React.Component{
     render(){
+const foto = require('../imagenes/fondouno.jpg')
         return (
         <>
+        <div id="fondos" >
+        <img src={foto} alt="fondo"/>
+        </div>
         <div id="masTodo">
         <h3 id="mas">view all the cities</h3>
         <p id="texto">Learn about the best places in the world</p>

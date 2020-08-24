@@ -25,10 +25,11 @@
     text-align: center;
     color: #ffffff;
     font-weight: bold;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
 }
 span{
     font-weight: normal;
+    font-size: 1.3vw;
 }
 #listaa{
     margin: 2vw;
@@ -56,6 +57,9 @@ span{
     width:100%;
     margin-top: -10vh;
     
+}
+#diiv{
+    height: 20vh;
 }
 @media only screen and (max-width: 600px){
     #fotosCiudad{
@@ -88,5 +92,11 @@ span{
     #ciudad{
         margin:10% 0% 15% 0%;
         text-align: center;
+    }
+    
+}
+@media only screen and (max-width: 800px){
+    #diiv{
+        display: none;
     }
 }
