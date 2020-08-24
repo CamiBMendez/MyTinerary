@@ -53,7 +53,6 @@ class Ciudades extends React.Component{
     }
 }
 
-//mayusculas y minusculas
-//que busque de principio a fin, indice de donde quiero que coience la cadena que busco 
+
 
 export default Ciudades
