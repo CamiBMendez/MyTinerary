@@ -100,10 +100,19 @@ span{
         text-align: center;
     }
     #listaa{
-        margin: 2vw;
         margin-bottom: 8%;
         list-style: none;
         
+    }
+    #widthCiudad{
+        width:40vw;
+        height: 45vh;
+    }
+    #textos {
+        position: relative;
+        margin-bottom: -36%;
+        background-color: #5f5f5fa6;
+        width: 70vw;
     }
     
 }
