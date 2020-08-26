@@ -26,8 +26,12 @@ const Header = (props) => {
         <img src={fotos} alt="logo" id="titulo" />
         <div id="flexible">
         <div id="menu">
-          <NavLink to="/home"  className="navs">Home</NavLink>
-          <NavLink to="/ciudades" className="navs">Cities</NavLink>
+          <div className="hoover">
+            <NavLink to="/home"  className="navs">Home</NavLink>
+          </div>  
+          <div className="hoover">
+            <NavLink to="/ciudades" className="navs">Cities</NavLink>
+          </div>  
         </div>
         </div>
         <div  className="nav">

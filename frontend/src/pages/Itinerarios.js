@@ -4,7 +4,8 @@ import '../styles/itinerarios.css'
 import Itinerario from '../components/Itinerario'
 import notFound from '../imagenes/itinerary.png'
 import { NavLink } from 'react-router-dom'
-import goBack from '../imagenes/goback.png'
+import goBack from '../imagenes/goBack.png'
+import menuHome from '../imagenes/menuHome.png'
 
 
 class Itinerarios extends React.Component{
@@ -36,7 +37,7 @@ class Itinerarios extends React.Component{
         }
         return(
             <>
-            <div id="diiv"></div>
+            <div id="diivDos"></div>
             <div id="fondoIt" style={{backgroundImage: `url(${this.state.city.picture})`}}>
                <div id="textosIt">
                   <p>{this.state.city.city}<br/><span>{this.state.city.country}</span></p>
@@ -47,10 +48,15 @@ class Itinerarios extends React.Component{
             <hr/>
             {mensaje()}
             {this.state.itinerario.map(itinerario =>{
-                  return  <Itinerario key={itinerario.title} hola={itinerario}/>
+                  return  <Itinerario key={itinerario.title} itinerario={itinerario}/>
               })}
             <div id="MiBack">
-            <NavLink to="/ciudades" id="goBack"><img src={goBack} alt="goBack"/></NavLink>
+                <div id="Back">
+                  <NavLink to="/ciudades" id="goBack"><img src={goBack} alt="goBack"/></NavLink>
+                </div>
+                <div id="goHome">
+                  <NavLink to="/home" id="menuHome"><img src={menuHome} alt="goMenu"/></NavLink>
+                </div>
             </div>
             </>
         )

@@ -15,18 +15,18 @@
    position: relative;
 
 }
-
 #textosIt p{
-    background-color: #5f5e5eaf;
+    background-color: #5f5e5e8a;
     text-align: center;
     color: #ffffff;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 2vw;
 }
 
 span{
+color: #dfdfdfda;
 font-weight: normal;
-font-size: 1.3vw;
+font-size: 1.5vw;
 }
 #itinerario{
     display: flex;
@@ -40,6 +40,7 @@ font-size: 1.3vw;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 5%;
 
 }
 
@@ -48,7 +49,7 @@ font-size: 1.3vw;
     width: 10vw;
     height: 10vw;
     border-radius: 100%;
-    margin: 4% 3%;
+    margin: 4% 5%;
     border: 4px solid #979797d7;
     box-shadow: 0vw 0vw 0.5vw 0vw #5f5e5e80;
     background-size: cover;
@@ -56,9 +57,9 @@ font-size: 1.3vw;
 }
 
 
-#titulo{
+p#titulo{
     font-weight: bold;
-    font-size: 150%;
+    font-size: 2vw;
 }
 
 p{
@@ -69,24 +70,41 @@ p{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-left: -3vw;
-    margin-right: -3vw;
+    align-items: center;
+
+}
+#heart{
+    width: 2vw;
+
+}
+#hearts{
+    width: 6vw;
+    height: 0.5vh;
+}
+#heart:hover{
+    cursor: pointer;
+    width:2.3vw
+}
+
+#bill{
+    width: 2vw;
+    padding-bottom: 1vh;
 }
 .ratings{
-    font-weight: normal;
-    font-size: small;
+    font-weight: bold;
+    font-size: 1.3vw;
 }
 
 #hash{
     display: inline;
     margin: 0.5vw;
-    color: #447072;
+    color: #2f4d4e;
     font-weight: lighter;
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 
 #todosLosP{
-    margin-left: 5vw;
+    margin-left: 1vw;
 }
 
 h2{
@@ -103,23 +121,45 @@ h2{
     margin-bottom:20vh;
 }
 #MiBack{
-    height: 25vh;
+    height: 20vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 12vh;
+    margin-bottom: -7vh;
+
 }
 #goBack img{
-    height: 26vh;
+    width: 10vw;
     padding: 1vw;
+
+
+}
+#Back{
+    width: 10vw;
 }
 #goBack img:hover{
    padding: 0.5vw;
+
 }
+#menuHome img{
+    width: 10vw;
+    padding: 1vw;
+}
+#menuHome img:hover{
+    padding: 0.5vw;
+}
+#goHome{
+    width: 10vw;
+}
+
 #botons button{
     border-radius: 0vw 1.3vw 0vw 1.3vw;
     padding: 0.5vw;
     color: #ffffff;
-    height: 3vw;
+    height: 4%;
+    margin-top: 3vh;
     background-color: #5f9ea04d;
     font-weight: bold;
     border:none;
@@ -130,4 +170,120 @@ h2{
     color: #000000;
     background-color: #90d6d84d;
     box-shadow: 0vw 0vw 0.5vw 0vw #5f5e5e80;
+}
+
+@media only screen and (max-width: 800px){
+    #itinerario{
+        display: flex;
+        flex-direction: column;
+        background-color: #526e8546;
+        box-shadow: 0vw 0vw 2vw 0vw #5f5e5e4b;
+        margin: 6vh 20vw 6vh 21vw;
+        width: 55vw;
+        border-radius: 1.5vw;
+    }
+    #itinerarios{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    #todosLosP{
+        margin-left: 2vw;
+        margin-right: 2vw;
+
+    }
+    p#titulo{
+        font-weight: bold;
+        font-size: 3vw;
+        margin-bottom: 1vh;
+    }
+    #hash{
+        display: inline;
+        margin: 0vh 0.5vw 0.5vh 0.5vw;
+        color: #2f4d4e;
+        font-weight: lighter;
+        font-size: 2.4vw;
+
+    }
+    #imagen{
+        width: 20vw;
+        height: 20vw;
+        border-radius: 100%;
+        margin: 4% 3%;
+        border: 4px solid #979797d7;
+        box-shadow: 0vw 0vw 0.5vw 0vw #5f5e5e80;
+        background-size: cover;
+        background-position: center;
+    }
+    .ratings{
+        font-weight: bold;
+        font-size: 2vw;
+    }
+    #primerP{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+    
+    #textosIt p{
+        background-color: #5f5e5e8a;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 2.5vw;
+    }
+    
+    span{
+    color: #dfdfdfee;
+    font-weight: normal;
+    font-size: 2vw;
+    }
+
+    #goBack img{
+        width: 13vw;
+        padding: 1vw;
+    }
+    
+    #goBack img:hover{
+       padding: 0.5vw;
+    }
+    #menuHome img{
+        width: 13vw;
+        padding: 1vw;
+        margin-left: 3vw;
+    }
+    #menuHome img:hover{
+        padding: 0.5vw;
+    }
+    #MiBack{
+        height: 15vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12vh;
+        margin-bottom: -5vh;
+       margin-right: 10vw;
+    }
+    #heart{
+        width: 3vw;
+        padding-bottom: 0.5vh;
+    }
+    #hearts{
+        width: 8vw;
+        height: 0.8vh;
+    }
+    #heart:hover{
+        cursor: pointer;
+        width:3.3vw
+    }
+    #bill{
+        width: 3vw;
+        padding-bottom: 0.8vh;
+    }
+
 }

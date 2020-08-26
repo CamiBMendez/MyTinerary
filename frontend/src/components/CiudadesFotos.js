@@ -9,7 +9,9 @@ class  CiudadesFoto extends React.Component{
                     <div id="textos">
                     <p >{this.props.ciudad.city}<br/><span>{this.props.ciudad.country}</span></p>
                     </div>
+                    <div id="widthCiudad">
                     <img src={this.props.ciudad.picture} alt="ciudades" id="imagenesCiudad"/>
+                    </div>
                 </li>
         )
     }

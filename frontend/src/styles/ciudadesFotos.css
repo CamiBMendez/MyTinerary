@@ -12,9 +12,9 @@
 }
 #imagenesCiudad:hover{
     width: 40.1vw;
-    height: 20.1vw;
     box-shadow: 0vw 0vw 2vw 0vw #707070e5;
 }
+
 
 #textos {
     position: relative;
@@ -34,8 +34,7 @@ span{
 #listaa{
     margin: 2vw;
     margin-bottom: 25%;
-    list-style: none;
-    
+    list-style: none;  
 }
 #buscador{
     display: flex;
@@ -63,6 +62,10 @@ span{
 }
 #navl{
     text-decoration: none;
+}
+#widthCiudad{
+    width:40vw;
+    height: 40vh;
 }
 @media only screen and (max-width: 600px){
     #fotosCiudad{
