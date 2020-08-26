@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/ciudadesFotos.css'
 
+
 class  CiudadesFoto extends React.Component{
     render(){
         return(

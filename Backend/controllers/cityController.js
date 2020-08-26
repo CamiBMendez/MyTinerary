@@ -28,7 +28,18 @@ const cityController = {
             res.json({success: false, error:error})
         })
         
+    },
+    
+    unaCity: async (req, res) => {
+        
+        const Itinerario = await City.findOne({_id: req.params.id})
+       
+        res.json({
+            success: true,
+            city: Itinerario
+        })
     }
+
 }
 
 module.exports= cityController

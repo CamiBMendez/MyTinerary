@@ -2,6 +2,7 @@ import React from "react"
 import CiudadesFoto from "../components/CiudadesFotos"
 import axios from 'axios'
 import ciudad from '../imagenes/CityNotFound.png'
+import {NavLink} from "react-router-dom"
 
 class Ciudades extends React.Component{
     state={
@@ -45,7 +46,7 @@ class Ciudades extends React.Component{
             <ul id="fotosCiudad">
             {mensaje()}
             {this.state.ciudades.map(ciudad =>{
-                  return <CiudadesFoto key={ciudad.city} ciudad={ciudad} /> 
+                  return <NavLink to={`/itinerarios/${ciudad._id}`}  id="navl"><CiudadesFoto key={ciudad.city} ciudad={ciudad} /> </NavLink> 
               })}
             </ul>
             </>

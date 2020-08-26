@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Ciudades from './pages/Ciudades';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Itinerarios from './pages/Itinerarios';
 
 
 class App extends React.Component{
@@ -17,6 +18,7 @@ class App extends React.Component{
         <Switch>
           <Route path="/home" component={Home} />
           <Route path="/ciudades" component={Ciudades} />
+          <Route path="/itinerarios/:id" component={Itinerarios} />
           <Redirect to="/home"/>
         </Switch>
         <Footer />

@@ -33,6 +33,16 @@ const itinerarioController = {
             res.json({success: false, error:error})
         })
         
+    },
+    itinerario: async (req, res) => {
+        
+        const lista = await Itinerario.find({cityId: req.params.id})
+       
+        res.json({
+            success: true,
+            itinerario: lista
+        })
+
     }
 }
 

@@ -1,5 +1,5 @@
 #fotosCiudad{
-    display: flex;
+   display: flex;
    flex-wrap: wrap;
    justify-content: center;
    width: 100vw;
@@ -33,7 +33,7 @@ span{
 }
 #listaa{
     margin: 2vw;
-    margin-bottom: 10%;
+    margin-bottom: 25%;
     list-style: none;
     
 }
@@ -60,6 +60,9 @@ span{
 }
 #diiv{
     height: 20vh;
+}
+#navl{
+    text-decoration: none;
 }
 @media only screen and (max-width: 600px){
     #fotosCiudad{
@@ -92,6 +95,12 @@ span{
     #ciudad{
         margin:10%  3% 15% 0%;
         text-align: center;
+    }
+    #listaa{
+        margin: 2vw;
+        margin-bottom: 8%;
+        list-style: none;
+        
     }
     
 }

@@ -1,0 +1,133 @@
+#fondoIt{
+    height: 40vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0vw 0vw 2vw 0vw #9494949a;
+
+}
+
+
+
+#textosIt{ 
+   margin-top: 17vh;
+   position: relative;
+
+}
+
+#textosIt p{
+    background-color: #5f5e5eaf;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+span{
+font-weight: normal;
+font-size: 1.3vw;
+}
+#itinerario{
+    display: flex;
+    flex-direction: column;
+    background-color: #526e8546;
+    box-shadow: 0vw 0vw 2vw 0vw #5f5e5e4b;
+    margin: 6vh 25vw;
+    border-radius: 1.5vw;
+}
+#itinerarios{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
+#imagen{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+    margin: 4% 3%;
+    border: 4px solid #979797d7;
+    box-shadow: 0vw 0vw 0.5vw 0vw #5f5e5e80;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#titulo{
+    font-weight: bold;
+    font-size: 150%;
+}
+
+p{
+    text-align: center;
+}
+
+#primerP{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: -3vw;
+    margin-right: -3vw;
+}
+.ratings{
+    font-weight: normal;
+    font-size: small;
+}
+
+#hash{
+    display: inline;
+    margin: 0.5vw;
+    color: #447072;
+    font-weight: lighter;
+    font-size: 1vw;
+}
+
+#todosLosP{
+    margin-left: 5vw;
+}
+
+h2{
+    text-align: center;
+    color: #526e85;
+    margin-top: 5vh;
+}
+#TineraryPadre{
+    display: flex;
+    justify-content: center;
+}
+#noTinerary{
+    width: 30vw;
+    margin-bottom:20vh;
+}
+#MiBack{
+    height: 25vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+#goBack img{
+    height: 26vh;
+    padding: 1vw;
+}
+#goBack img:hover{
+   padding: 0.5vw;
+}
+#botons button{
+    border-radius: 0vw 1.3vw 0vw 1.3vw;
+    padding: 0.5vw;
+    color: #ffffff;
+    height: 3vw;
+    background-color: #5f9ea04d;
+    font-weight: bold;
+    border:none;
+    font-size: small;
+
+}
+#botons button:hover{
+    color: #000000;
+    background-color: #90d6d84d;
+    box-shadow: 0vw 0vw 0.5vw 0vw #5f5e5e80;
+}

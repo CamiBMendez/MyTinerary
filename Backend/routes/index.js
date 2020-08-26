@@ -9,15 +9,26 @@ rutas.route('/cities')
 .get(cityController.listacity)
 .post(cityController.nuevaCity)
 
+rutas.route('/cities/:id')
+.get(cityController.unaCity)
+
+
 
 
 rutas.route('/itinerarios')
 .get(itinerarioController.listaItinerarios)
 .post(itinerarioController.nuevoItinerarios)
 
+rutas.route('/itinerarios/:id')
+.get(itinerarioController.itinerario)
+
 
 rutas.route('/activities')
 .get(activityController.listaActivity)
 .post(activityController.nuevaActivity)
+
+
+
+
 
 module.exports = rutas
