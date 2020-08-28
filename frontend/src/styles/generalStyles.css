@@ -9,7 +9,6 @@ body{
     height: 100%;
 }
 #fondos img{
-
     width: 100%;
     box-shadow: 0vw 0vw 2vw 0vw #acaaaacc;
 }
@@ -26,7 +25,7 @@ h3#mas{
     height: 42%;
 
 }
-p#textos{
+p#textoss{
     display: none;
 }
 
@@ -61,7 +60,7 @@ p#textos{
     #fondos{
         display: none;
     }
-    p#textos{
+    p#textoss{
         text-align: center;
         color: #536786;
         display: block;
@@ -73,7 +72,7 @@ p#textos{
     span#spann{
         font-weight: normal; 
         font-style: italic;
-        color: #92a6c4;
+        color: #a7bedf;
     }
     #masTodo{
         height: 22vh;
@@ -95,4 +94,10 @@ p#texto{
 }
 hr{
  margin: 0vh 30vw;
+}
+
+#activities{
+    border-top: 1px solid #ffffff;
+    margin:0vh 1vw 0vh 0vw;
+    padding: 5vh 1vw;
 }

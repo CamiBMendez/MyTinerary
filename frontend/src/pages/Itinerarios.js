@@ -44,7 +44,7 @@ class Itinerarios extends React.Component{
                </div>
             </div>
             <h2>Tineraries</h2>
-            <p>Everything you need to know</p>
+            <p className="ratings">Everything you need to know</p>
             <hr/>
             {mensaje()}
             {this.state.itinerario.map(itinerario =>{

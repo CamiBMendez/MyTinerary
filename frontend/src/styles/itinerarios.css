@@ -62,9 +62,7 @@ p#titulo{
     font-size: 2vw;
 }
 
-p{
-    text-align: center;
-}
+
 
 #primerP{
     display:flex;
@@ -86,13 +84,23 @@ p{
     width:2.3vw
 }
 
-#bill{
-    width: 2vw;
-    padding-bottom: 1vh;
+
+.bill{
+    width: 2.5vw;
+    padding:0.1vw;
+    padding-bottom: 0.5vh;
+
+
 }
+#billetePadre{
+    display: flex;
+    flex-direction: row;
+}
+
 .ratings{
     font-weight: bold;
     font-size: 1.3vw;
+    text-align: center;
 }
 
 #hash{
@@ -281,9 +289,17 @@ h2{
         cursor: pointer;
         width:3.3vw
     }
-    #bill{
-        width: 3vw;
-        padding-bottom: 0.8vh;
+    .bill{
+        width: 3.5vw;
+        padding:0.1vw;
+        padding-bottom: 1vh;
+    
+    
     }
-
+    #billetePadre{
+        display: flex;
+        flex-direction: row;
+    }
 }
+
+

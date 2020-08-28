@@ -40,8 +40,15 @@ span{
     display: flex;
     justify-content: center;
 }
+h4{
+    text-align: center;
+    margin-top: 5%;
+    font-weight: bolder;
+    font-size: 4vw;
+    color: #526e85;
+}
 #ciudad{
-    margin:6%  0%;
+    margin:2% 0% 6% 0%;
     text-align: center;
     padding: 1vh 8vw;
     font-weight: bolder;
@@ -96,7 +103,7 @@ span{
         font-size: 2.5vw;
     }
     #ciudad{
-        margin:10%  3% 15% 0%;
+        margin:3%  3% 15% 0%;
         text-align: center;
     }
     #listaa{
@@ -114,10 +121,18 @@ span{
         background-color: #5f5f5fa6;
         width: 70vw;
     }
-    
+    h4{
+        text-align: center;
+        margin-top: 5%;
+        margin-right: 3vw;
+        font-weight: bolder;
+        font-size: 6vw;
+        color: #526e85;
+    }
 }
 @media only screen and (max-width: 800px){
     #diiv{
         display: none;
     }
 }
+
