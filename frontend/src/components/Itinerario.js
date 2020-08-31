@@ -22,6 +22,7 @@ class Itinerario extends React.Component{
      }
     billetes(billeteVacio, billeteVacioCuenta)
     billetes(billete, this.props.itinerario.price)
+    
     const mostrarInfo = e =>{
         this.setState({verMas: !this.state.verMas})
     }
@@ -38,7 +39,7 @@ class Itinerario extends React.Component{
                     </div>
                     <p class="ratings">{this.props.itinerario.rating}</p>
                   </div>
-                  <p class="ratings">{this.props.itinerario.duration} hs </p>
+                  <p class="ratings">{this.props.itinerario.duration} hrs </p>
                   <div id="billetePadre">
                      <p>{billete.map(billete => <img alt="billete" src={bill} className="bill"/> )}</p>
                      <p>{billeteVacio.map(billeteVacio => <img alt="billete" src={bill2} className="bill"/> )}</p>
@@ -51,8 +52,8 @@ class Itinerario extends React.Component{
                </div>
             </div>
             <div id="botons">
-            <button onClick={mostrarInfo}>read more</button>
             {this.state.verMas && <Activities/>}
+            <button onClick={mostrarInfo}>{this.state.verMas ? "view less" : "view more"}</button>
             </div>
         </div>
         )

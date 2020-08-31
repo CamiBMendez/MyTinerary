@@ -72,7 +72,8 @@ p#titulo{
 
 }
 #heart{
-    width: 2vw;
+    width: 2.9vw;
+    padding: 0.5vw;
 
 }
 #hearts{
@@ -81,7 +82,7 @@ p#titulo{
 }
 #heart:hover{
     cursor: pointer;
-    width:2.3vw
+   padding: 0.2vw;
 }
 
 
@@ -278,7 +279,8 @@ h2{
        margin-right: 10vw;
     }
     #heart{
-        width: 3vw;
+        width: 3.5vw;
+        padding: 0.2;
         padding-bottom: 0.5vh;
     }
     #hearts{
@@ -287,7 +289,7 @@ h2{
     }
     #heart:hover{
         cursor: pointer;
-        width:3.3vw
+        padding: 0.1;
     }
     .bill{
         width: 3.5vw;

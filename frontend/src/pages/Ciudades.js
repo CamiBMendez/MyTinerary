@@ -6,7 +6,7 @@ import {NavLink} from "react-router-dom"
 
 class Ciudades extends React.Component{
     state={
-       ciudades:[],
+       ciudades: null,
        ciudadesFiltradas: []
     }
     async componentDidMount(){
@@ -27,6 +27,9 @@ class Ciudades extends React.Component{
 
 
     render(){
+        if (this.state.ciudades === null){
+            return null
+        }
         const mensaje = () =>{
             if (this.state.ciudades.length===0){
                  return(
