@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
 
 const activitySchema = new mongoose.Schema({
-    activities:{type: Array},
-    ItineraryId: { type:mongoose.Schema.ObjectId, ref:"itinerario"},
+    title:{type: String},
+    picture:{type: String, required:true},
+    description: {type: String},
+    itineraryId: { type:mongoose.Schema.ObjectId, ref:"itinerario"},
 })
 
 const Activity = mongoose.model('activity', activitySchema)

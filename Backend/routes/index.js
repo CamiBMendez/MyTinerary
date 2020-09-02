@@ -27,6 +27,9 @@ rutas.route('/activities')
 .get(activityController.listaActivity)
 .post(activityController.nuevaActivity)
 
+rutas.route('/activities/:id')
+.get(activityController.activity)
+
 
 
 

@@ -37,9 +37,9 @@ class Itinerario extends React.Component{
                     <div id="hearts">
                          <img alt="heart" src={heart} id="heart"/> 
                     </div>
-                    <p class="ratings">{this.props.itinerario.rating}</p>
+                    <p className="ratings">{this.props.itinerario.rating}</p>
                   </div>
-                  <p class="ratings">{this.props.itinerario.duration} hrs </p>
+                  <p className="ratings" >{this.props.itinerario.duration} hrs </p>
                   <div id="billetePadre">
                      <p>{billete.map(billete => <img alt="billete" src={bill} className="bill"/> )}</p>
                      <p>{billeteVacio.map(billeteVacio => <img alt="billete" src={bill2} className="bill"/> )}</p>
@@ -52,7 +52,7 @@ class Itinerario extends React.Component{
                </div>
             </div>
             <div id="botons">
-            {this.state.verMas && <Activities/>}
+            {this.state.verMas && <Activities itinerary={this.props.itinerario._id}/>}
             <button onClick={mostrarInfo}>{this.state.verMas ? "view less" : "view more"}</button>
             </div>
         </div>

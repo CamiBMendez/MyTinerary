@@ -8,16 +8,18 @@ const activityController = {
         
         res.json({
             success: true,
-            itinerarios: lista
+            activities: lista
         })
         
     },
     nuevaActivity:(req, res) => {
         
-        const {activities, activityId} = req.body 
+        const {title, picture, description, itineraryId} = req.body 
         const nuevaActivity = new Activity({
-            activities,
-            activityId
+            title,
+            picture,
+            description,
+            itineraryId
 
         })
         nuevaActivity.save()
@@ -28,6 +30,16 @@ const activityController = {
             res.json({success: false, error:error})
         })
         
+    },
+    activity: async (req, res) => {
+        
+        const lista = await Activity.find({itineraryId: req.params.id})
+       
+        res.json({
+            success: true,
+            actividad: lista
+        })
+
     }
 }
 

@@ -18,12 +18,12 @@ const Header = (props) => {
     <img src={icon} alt='logo log in' />
   </DropdownToggle>
   <DropdownMenu>
-    <DropdownItem className="navsa">Log in</DropdownItem>
+     <NavLink to="/logIn"> <DropdownItem className="navsa">Log in</DropdownItem> </NavLink>
     <DropdownItem divider />
-    <DropdownItem className="navsa">Register</DropdownItem>
+    <NavLink to="/register"><DropdownItem className="navsa">Register</DropdownItem></NavLink>
   </DropdownMenu>
   </Dropdown>
-        <img src={fotos} alt="logo" id="titulo" />
+    <NavLink to="/home"> <img src={fotos} alt="logo" id="titulo"/> </NavLink>
         <div id="flexible">
         <div id="menu">
           <div className="hoover">

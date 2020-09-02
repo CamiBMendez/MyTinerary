@@ -33,7 +33,7 @@ span{
 }
 #listaa{
     margin: 2vw;
-    margin-bottom: 25%;
+
     list-style: none;  
 }
 #buscador{
@@ -71,9 +71,16 @@ h4{
     text-decoration: none;
 }
 #widthCiudad{
-    width:40vw;
-    height: 40vh;
+    width:40%;
+    height: 40%;
+    margin-bottom: 25%;
 }
+@media only screen and (max-width: 800px){
+    #diiv{
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 600px){
     #fotosCiudad{
        display: flex;
@@ -107,13 +114,12 @@ h4{
         text-align: center;
     }
     #listaa{
-        margin-bottom: 8%;
         list-style: none;
-        
     }
     #widthCiudad{
-        width:40vw;
-        height: 45vh;
+        width:40%;
+        height: 45%;
+        margin-bottom: 5%;
     }
     #textos {
         position: relative;
@@ -130,9 +136,8 @@ h4{
         color: #526e85;
     }
 }
-@media only screen and (max-width: 800px){
-    #diiv{
-        display: none;
-    }
-}
+
+
+
+
 

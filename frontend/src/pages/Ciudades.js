@@ -3,6 +3,7 @@ import CiudadesFoto from "../components/CiudadesFotos"
 import axios from 'axios'
 import ciudad from '../imagenes/CityNotFound.png'
 import {NavLink} from "react-router-dom"
+import loading from '../imagenes/loading-animation-2.gif'
 
 class Ciudades extends React.Component{
     state={
@@ -28,7 +29,7 @@ class Ciudades extends React.Component{
 
     render(){
         if (this.state.ciudades === null){
-            return null
+            return  <img src={loading} alt="NoTinerary" id="loading"/>
         }
         const mensaje = () =>{
             if (this.state.ciudades.length===0){

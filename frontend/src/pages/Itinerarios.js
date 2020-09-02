@@ -6,12 +6,13 @@ import notFound from '../imagenes/itinerary.png'
 import { NavLink } from 'react-router-dom'
 import goBack from '../imagenes/goBack.png'
 import menuHome from '../imagenes/menuHome.png'
+import loading from '../imagenes/loading-animation-2.gif'
 
 
 class Itinerarios extends React.Component{
     state ={
         city:{},
-        itinerario: []
+        itinerario:null
     }
     async componentDidMount(){
         const IdABuscar = this.props.match.params.id
@@ -19,13 +20,15 @@ class Itinerarios extends React.Component{
         const info = respuesta.data.city
         const respuestaIt = await axios.get(`http://127.0.0.1:4000/api/itinerarios/${IdABuscar}`)
         const infoIt = respuestaIt.data.itinerario
-        console.log(respuestaIt)
         this.setState({
             city: info,
             itinerario: infoIt
         })
     }
     render(){
+        if (this.state.itinerario === null){
+            return <img src={loading} alt="NoTinerary" id="loading"/>
+        }
         const mensaje = () =>{
             if (this.state.itinerario.length===0){
                  return(
@@ -40,7 +43,7 @@ class Itinerarios extends React.Component{
             <div id="diivDos"></div>
             <div id="fondoIt" style={{backgroundImage: `url(${this.state.city.picture})`}}>
                <div id="textosIt">
-                  <p>{this.state.city.city}<br/><span>{this.state.city.country}</span></p>
+                  <p key={this.state.city.city}>{this.state.city.city}<br/><span >{this.state.city.country}</span></p>
                </div>
             </div>
             <h2>Tineraries</h2>
