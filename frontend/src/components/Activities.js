@@ -17,13 +17,15 @@ class Activities extends React.Component {
     }
     render() {
         return (
-             <div id="activities" > 
+             <div  > 
              {this.state.activity.map(act=>{
                 return (
-                <div key={act.title}>
-                <div id="ponerWid" style={{backgroundImage: `url(${act.picture})`}}> </div>
-                <p> {act.title}</p>
-                <p>{act.description}</p>
+                <div key={act.title} id="activities">
+                    <div id="ponerWid" style={{backgroundImage: `url(${act.picture})`}}> </div>
+                    <div id="padreDescription">
+                        <p id="nameAct"> {act.title}</p>
+                        <p id="description">{act.description}</p>
+                    </div>
                 </div>
                 )
              })}

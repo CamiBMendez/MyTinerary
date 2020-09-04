@@ -7,21 +7,20 @@ import { NavLink } from 'react-router-dom'
 import goBack from '../imagenes/goBack.png'
 import menuHome from '../imagenes/menuHome.png'
 import loading from '../imagenes/loading-animation-2.gif'
+import ciudadesActions from "../redux/actions /ciudadesActions"
+import {connect} from 'react-redux'
 
 
 class Itinerarios extends React.Component{
     state ={
-        city:{},
         itinerario:null
     }
     async componentDidMount(){
         const IdABuscar = this.props.match.params.id
-        const respuesta = await axios.get(`http://127.0.0.1:4000/api/cities/${IdABuscar}`)
-        const info = respuesta.data.city
+        this.props.ciudad(IdABuscar)
         const respuestaIt = await axios.get(`http://127.0.0.1:4000/api/itinerarios/${IdABuscar}`)
         const infoIt = respuestaIt.data.itinerario
         this.setState({
-            city: info,
             itinerario: infoIt
         })
     }
@@ -41,9 +40,9 @@ class Itinerarios extends React.Component{
         return(
             <>
             <div id="diivDos"></div>
-            <div id="fondoIt" style={{backgroundImage: `url(${this.state.city.picture})`}}>
+            <div id="fondoIt" style={{backgroundImage: `url(${this.props.city.picture})`}}>
                <div id="textosIt">
-                  <p key={this.state.city.city}>{this.state.city.city}<br/><span >{this.state.city.country}</span></p>
+                  <p key={this.props.city.city}>{this.props.city.city}<br/><span >{this.props.city.country}</span></p>
                </div>
             </div>
             <h2>Tineraries</h2>
@@ -65,5 +64,15 @@ class Itinerarios extends React.Component{
         )
     }
 }
+const mapStateToProps = state =>{
+    return {
+        city: state.ciudades.city
 
-export default Itinerarios
+    }
+}
+const mapDispatchToProps ={
+    getCities: ciudadesActions.getCities,
+    ciudad: ciudadesActions.ciudad
+}
+
+export default  connect(mapStateToProps, mapDispatchToProps)(Itinerarios)

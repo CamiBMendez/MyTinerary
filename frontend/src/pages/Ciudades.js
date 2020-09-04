@@ -1,38 +1,29 @@
 import React from "react"
 import CiudadesFoto from "../components/CiudadesFotos"
-import axios from 'axios'
 import ciudad from '../imagenes/CityNotFound.png'
 import {NavLink} from "react-router-dom"
 import loading from '../imagenes/loading-animation-2.gif'
+import ciudadesActions from "../redux/actions /ciudadesActions"
+import {connect} from 'react-redux'
 
 class Ciudades extends React.Component{
-    state={
-       ciudades: null,
-       ciudadesFiltradas: []
-    }
-    async componentDidMount(){
-        const respuesta = await axios.get('http://127.0.0.1:4000/api/cities')
-        const info = await respuesta.data.cities
-        this.setState({
-            ciudades: info,
-            ciudadesFiltradas:info
-        })
+   
+    componentDidMount(){
+       this.props.getCities()
+       
     }
     valores = e =>{
         const valorDeseado = e.target.value.toLowerCase().trim()
-        const filtro = this.state.ciudadesFiltradas.filter(ciudad => ciudad.city.toLowerCase().indexOf(valorDeseado) === 0)
-        this.setState({
-            ciudades: filtro
-        })
+        this.props.filtrarCiudades(valorDeseado)
     }
 
 
     render(){
-        if (this.state.ciudades === null){
+        if (this.props.ciudades === null){
             return  <img src={loading} alt="NoTinerary" id="loading"/>
         }
         const mensaje = () =>{
-            if (this.state.ciudades.length===0){
+            if (this.props.ciudadesFiltradas.length===0){
                  return(
                 <div id="padreImagen">
                  <img src={ciudad} alt="ciudad" id="imagenCity"/>
@@ -50,7 +41,7 @@ class Ciudades extends React.Component{
             </div>
             <ul id="fotosCiudad">
             {mensaje()}
-            {this.state.ciudades.map(ciudad =>{
+            {this.props.ciudadesFiltradas.map(ciudad =>{
                   return <NavLink to={`/itinerarios/${ciudad._id}`}  id="navl"><CiudadesFoto key={ciudad.city} ciudad={ciudad} /> </NavLink> 
               })}
             </ul>
@@ -58,7 +49,17 @@ class Ciudades extends React.Component{
         )
     }
 }
+const mapStateToProps = state =>{
+    return {
+        ciudades: state.ciudades.ciudades,
+        ciudadesFiltradas: state.ciudades.ciudadesFiltradas
+
+    }
+}
+const mapDispatchToProps ={
+    getCities: ciudadesActions.getCities,
+    filtrarCiudades: ciudadesActions.filtrarCiudades
+}
 
 
-
-export default Ciudades
+export default connect(mapStateToProps, mapDispatchToProps)(Ciudades)
