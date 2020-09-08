@@ -1,0 +1,93 @@
+#divFormulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+}
+#divFormulario h3{
+    margin-top: 3vh;
+    text-align: center;
+    font-weight: bold;
+    color: #526e85;
+}
+
+.allInput{
+   text-align: center;
+   font-size: 1.5vw;
+    padding: 0.5vw;
+    margin: 1vw;
+    width: 39vw;
+    border-radius: 0vw 0.5vw;
+    border: 1px solid #3c4983;
+    box-shadow: 0vw 0vw 1vw 0vw #9b999954;
+}
+.divsInputs{
+    height: 10vh;
+    width: 40vw;
+}
+.allInput:hover{
+    padding: 0.6vw;
+    width: 39.1vw;
+    box-shadow: 0vw 0vw 1.3vw 0vw #9b99999a;
+    background-color: #e3e5ec41;
+    border:none;
+}
+
+
+#inputBut{
+    background-color:#526e85;
+    border: none;
+    padding: 0.5vw;
+    font-size: 1.5vw;
+    margin-top: 2%;
+    margin-top: 2vh;
+    border-radius: 0vw 0.5vw;
+    color: #ffffff;
+    margin-left: 15vw;
+}
+
+#inputBut:hover{
+    background-color:  #526e8560;
+    color: #000000;
+    padding: 0.6vw;
+    box-shadow: 0vw 0vw 2vw 0vw #7e7e7e70;
+}
+#botonesEnv{
+    height: 5vh;
+}
+
+
+#inputButt{
+    background-color: #526e85;
+    border: none;
+    font-size: 1.5vw;
+    padding: 0.5vw 2vw;
+    margin-top: 2vw;
+    border-radius: 0vw 1vw;
+    color: #ffffff;
+    margin-left: 16.5vw;
+}
+#inputButt:hover{
+    background-color:  #526e8560;
+    color: #000000;
+    padding: 0.6vw 2.1vw;
+    box-shadow: 0vw 0vw 2vw 0vw #7e7e7e70;
+}
+
+#textAccount{
+    text-align: center;
+    font-size: 1.5vw;
+    color:  #3c4983;;
+}
+@media only screen and (max-width: 800px){
+    .divsInputs{
+        height: 6vh;
+    }
+    #divFormulario{
+        height: 70vh;
+    }
+    #itinerarios #imagen{
+        width: 10vw!important;
+        height: 10vw!important;
+    }
+}

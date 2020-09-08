@@ -42,6 +42,9 @@ p#textoss{
 #diivDos{
     height: 12vh;
 }
+#centrarBoton{
+    height: 20vh;
+}
 
 @media only screen and (max-width: 800px){
     #diivDos{
