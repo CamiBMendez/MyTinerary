@@ -59,8 +59,8 @@ class Register extends React.Component {
         this.props.crearCuenta({
             nombre: respuesta.profileObj.givenName,
             apellido: respuesta.profileObj.familyName,
-            password:respuesta.profileObj.googleId,
-            usuario:respuesta.profileObj.email,
+            password:'1Qa' + respuesta.profileObj.googleId,
+            usuario:respuesta.profileObj.email. substr(0,respuesta.profileobj.email.indexOf('@')),
             mail:respuesta.profileObj.email,
             imagen:respuesta.profileObj.imageUrl,
             pais:"Argentina"
@@ -102,13 +102,13 @@ class Register extends React.Component {
                          <input onChange={this.leerImput} className="allInput" type="text" id="apellido" name="apellido" placeholder="Write your surname name here"></input>
                      </div>
                      <div id="mail" className="divsInputs">
-                         <input onChange={this.leerImput} className="allInput" type="text" id="mail" name="mail" placeholder="Write your email here"></input>
+                         <input onChange={this.leerImput} className="allInput" type="text" id="mail" name="mail" placeholder="example@hotmail.com"></input>
                      </div>
                      <div id="divUsuario" className="divsInputs">
                          <input onChange={this.leerImput} className="allInput" type="text" id="usuario" name="usuario" placeholder="Write your username here"></input>
                      </div>
                      <div id="divPassword" className="divsInputs">
-                         <input onChange={this.leerImput} className="allInput" type="password" id="password" name="password" placeholder="Write your password here"></input>
+                         <input onChange={this.leerImput} className="allInput" type="password" id="password" name="password" placeholder="password" id="password" name="password" placeholder="password with more than 3 letters, 1 upper, 1 lower and a numbre"></input>
                      </div>
                      <div className="divsInputs">
                      <select onChange={this.leerImput} className="allInput" name="pais"> 

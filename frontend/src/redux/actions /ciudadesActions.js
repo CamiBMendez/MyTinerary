@@ -65,7 +65,9 @@ nuevoComentario: (nuevoComentario, idItinerario) =>{
         const infoindex = {index}
         const respuesta = await axios.put(`http://127.0.0.1:4000/api/eliminarcomentario/${idItinerario}`, infoindex)
         if (!respuesta.data.success) {
-          swal(`${respuesta.data.error}`)}
+          swal("deleted")
+          
+        }
     }
   },
 

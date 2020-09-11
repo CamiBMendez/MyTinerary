@@ -41,7 +41,7 @@ const LogIn = (props) => {
     const responseGoogle = respuesta => {
         props.loguearUsuario({
             usuario:respuesta.profileObj.email,
-            password:respuesta.profileObj.googleId})
+            password:'1Qa' + respuesta.profileObj.googleId})
         props.history.push("/home")  
     }
 
@@ -56,7 +56,7 @@ const LogIn = (props) => {
                      <div id="logearConGoogle">
                      <GoogleLogin id="GoogleLogin"
                         clientId="1049209162847-t7ekj9mifjrg7jgfvo6cm43o43jr0ie2.apps.googleusercontent.com"
-                        buttonText="Crear cuenta con google"
+                        buttonText="Log in with google"
                         onSuccess={responseGoogle}
                         onFailure={responseGoogle}
                         cookiePolicy={'single_host_origin'}
