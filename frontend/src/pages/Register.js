@@ -108,7 +108,7 @@ class Register extends React.Component {
                          <input onChange={this.leerImput} className="allInput" type="text" id="usuario" name="usuario" placeholder="Write your username here"></input>
                      </div>
                      <div id="divPassword" className="divsInputs">
-                         <input onChange={this.leerImput} className="allInput" type="password" id="password" name="password" placeholder="password" id="password" name="password" placeholder="password with more than 3 letters, 1 upper, 1 lower and a numbre"></input>
+                         <input onChange={this.leerImput} className="allInput" type="password" id="password" name="password" placeholder="password" id="password" name="password" placeholder="password with more than 5 letters, 1 upper, 1 lower and a numbre"></input>
                      </div>
                      <div className="divsInputs">
                      <select onChange={this.leerImput} className="allInput" name="pais"> 
