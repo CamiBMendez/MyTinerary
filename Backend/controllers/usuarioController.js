@@ -24,18 +24,10 @@ const usuarioController = {
         if (error){
           res.json({success:false, error})
         }else{
-          res.json({success:true, token, nombre:user.nombre, imagen: user.imagen})
+          res.json({success:true, token, nombre:user.usuario, imagen: user.imagen})
         }
       })
    }
- },
- validarDatos: (req,res,next) =>{
-    //validacion (clase que dio ale)
-     if (req.body.nombre === "hola"){
-         res.json({success: false, error:"no se puede"})
-     }else{
-         next()
-     }
  },
  loguearUsuario: async (req, res) => {
    const {usuario, password} = req.body
@@ -56,6 +48,10 @@ const usuarioController = {
         })
      }
    }
- }
+ },
+ verificarToken: (req, res)=> {
+  const {usuario, imagen} = req.user
+  res.json({success: true, usuario, imagen})
+}
 }
 module.exports = usuarioController

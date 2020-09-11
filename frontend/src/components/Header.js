@@ -33,11 +33,11 @@ const Header = (props) => {
           <>
           <DropdownToggle id="back">
           <div id="itinerarios">
-            <img id="imagen" style={{ width: "6vw", height:"5.4vw", border:"2.5px solid #000000",backgroundImage: `url(${props.imagenLogueada})`, backgroundSize: "cover", backgroundPosition:"center"}} />
+            <div id="imagen" style={{ width: "6vw", height:"5.4vw", border:"2.5px solid #000000",backgroundImage: `url(${props.imagenLogueada})`, backgroundSize: "cover", backgroundPosition:"center"}} />
             </div>
           </DropdownToggle>
           <DropdownMenu>
-            <NavLink to="/profile"> <DropdownItem className="navsa">{props.nombreLogueado}</DropdownItem> </NavLink>
+            <NavLink to="/profile"> <DropdownItem className="navsa">{props.usuarioLogueado}</DropdownItem> </NavLink>
             <DropdownItem divider />
             <NavLink to="/"><DropdownItem onClick={props.desloguearUsuario} className="navsa">Log Out</DropdownItem></NavLink>
           </DropdownMenu>
@@ -68,11 +68,12 @@ const Header = (props) => {
   const mapStateToProps = state =>{
     return{
     imagenLogueada: state.user.imagen,
-    nombreLogueado: state.user.nombre,
+    usuarioLogueado: state.user.usuario,
     tokenLogueado: state.user.token
     }
   }
   const mapDispatchToProps = {
+   
     desloguearUsuario: usuariosActions.desloguearUsuario
   }
   

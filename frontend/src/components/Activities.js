@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import '../styles/activities.css'
-
+import Carousel from 'react-bootstrap/Carousel';
 
 class Activities extends React.Component {
     state ={
@@ -17,18 +17,22 @@ class Activities extends React.Component {
     }
     render() {
         return (
-             <div  > 
+            <div id="activitiesItem">
+             <Carousel> 
              {this.state.activity.map(act=>{
                 return (
-                <div key={act.title} id="activities">
-                    <div id="ponerWid" style={{backgroundImage: `url(${act.picture})`}}> </div>
-                    <div id="padreDescription">
+                <Carousel.Item>
+                    <div key={act.title} id="activities">
+                      <div id="ponerWid" style={{backgroundImage: `url(${act.picture})`}}> </div>
+                      <div id="padreDescription">
                         <p id="nameAct"> {act.title}</p>
                         <p id="description">{act.description}</p>
+                      </div>
                     </div>
-                </div>
+                </Carousel.Item>
                 )
              })}
+             </Carousel>
              </div>
         )
     }

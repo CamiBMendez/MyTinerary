@@ -3,6 +3,8 @@ import usuariosActions from '../redux/actions /usuariosActions'
 import {connect} from 'react-redux'
 import '../styles/user.css'
 import { NavLink } from 'react-router-dom';
+import { GoogleLogin } from 'react-google-login';
+import swal from 'sweetalert';
 
 
 const LogIn = (props) => {
@@ -21,7 +23,7 @@ const LogIn = (props) => {
     const enviarInfo  =async e => {
         e.preventDefault()
         if (props.usuario === ''|| props.password === ''){
-            alert("please complete all fields")
+            swal("please complete all fields","all are require", "error"); 
         }else{
             const usuarioLoguear = {usuario: nuevoUsuario.usuario, password:nuevoUsuario.password}
             await props.loguearUsuario(usuarioLoguear)
@@ -31,11 +33,17 @@ const LogIn = (props) => {
     }
     useEffect(()=>{
     if(props.success){
-        alert ("welcome")  
+        swal("Good job!", "welcome!", "success"); 
         props.history.push('/home')
     }
     },[props.success])
 
+    const responseGoogle = respuesta => {
+        props.loguearUsuario({
+            usuario:respuesta.profileObj.email,
+            password:respuesta.profileObj.googleId})
+        props.history.push("/home")  
+    }
 
         return (
             <div id="todoelhome">
@@ -45,6 +53,15 @@ const LogIn = (props) => {
               <div id="divFormulario">
                   <form>
                      <h3>Log In form</h3>
+                     <div id="logearConGoogle">
+                     <GoogleLogin id="GoogleLogin"
+                        clientId="1049209162847-t7ekj9mifjrg7jgfvo6cm43o43jr0ie2.apps.googleusercontent.com"
+                        buttonText="Crear cuenta con google"
+                        onSuccess={responseGoogle}
+                        onFailure={responseGoogle}
+                        cookiePolicy={'single_host_origin'}
+                    />
+                    </div>
                      <div id="divUsuario" className="divsInputs">
                          <input onChange={leerImput} type="text" className="allInput" id="usuario" name="usuario" placeholder="Write your username here"></input>
                      </div>

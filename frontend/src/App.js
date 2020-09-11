@@ -9,10 +9,21 @@ import Footer from './components/Footer';
 import Itinerarios from './pages/Itinerarios';
 import Register from './pages/Register';
 import LogIn from './pages/LogIn'
+import {connect} from 'react-redux'
+import usuariosActions from './redux/actions /usuariosActions';
+
+
+  
+    
 
 
 class App extends React.Component{
+  
   render(){
+   if (localStorage.getItem('token') && this.props.tokenLogueado===""){
+      (this.props.forcedLogIn(localStorage.getItem('token')))
+
+    }
     return(
       <>
       <BrowserRouter>
@@ -31,4 +42,14 @@ class App extends React.Component{
   }
 }
 
-export default App
+const mapDispatchToProps = {
+  forcedLogIn: usuariosActions.forcedLogIn
+}
+
+const mapStateToProps = state => {
+  return{
+    tokenLogueado: state.user.token  
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

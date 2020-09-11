@@ -24,8 +24,9 @@ const ciudadesReducer = (state = initialState, action)=>{
             ...state,
             city: action.payload
         }
+        
      
-     default:
+    default:
         return state
  }
  
